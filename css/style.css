@@ -1,0 +1,383 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* declaring colors */
+:root{
+    --textColor: #000000;
+    --main: #A3E67C;
+    --darkGreenText: #5E8449;
+}
+/***** DASHBOARD *****/
+/* body */
+.dashboard{
+	background: url(backImage_dash.jpg) repeat center center;
+    background-size: cover;
+    height: 100%;
+    background-blend-mode: lighten;
+    background-attachment: fixed;
+    background-repeat: repeat;
+
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
+	width: 100%;
+	margin: 0 auto;
+
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+/*** HEADER ***/
+.dashboard #header1{
+	position: sticky;
+	top: 0px;
+	left: 0px;
+	z-index: 20;
+	border-bottom: 2px solid rgb(255, 255, 255);
+	width: 100%;
+	min-height: 60px;
+	height: auto;
+	background-color: #3b3b3b;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.userset{
+	max-width: 300px;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+.userset img{
+	margin: 0;
+	padding: 0;
+	width: 50px;
+	height: 50px;
+	border: 2px solid var(--darkGreenText);
+	border-radius: 50%;
+	transition: 80ms linear;
+}
+.userset img:hover{
+	border:2px solid var(--main);
+}
+.userset a, .userset a:visited{
+	text-decoration: none;
+	color: var(--darkGreenText);
+	font-size: 1.3em;
+	transition: 80ms linear;
+}
+.userset a:hover{
+	color: var(--main);
+}
+.userset a input[type="submit"]{
+	width: 100px;
+	height: 30px;
+
+	background-color: var(--main);
+	color: var(--textColor);
+	font-size: 14px;
+	border: none;
+	box-shadow: none;
+	transition: 70ms linear;
+
+	border-radius: 10px 10px  10px 10px;
+	cursor: pointer;
+}
+.userset a input[type="submit"]:hover{
+	background-color: var(--darkGreenText);
+	color: #FFFFFF;
+}
+/* END OF HEADER */
+
+/* MAIN */
+#main2{
+	margin: 0 auto;
+	width: 50%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+/*ANA sredjivanje pozadine za dashboard*/
+/*html {
+    background: url(backimage.jpg) repeat center center;
+    background-size: cover;
+    height: 100%;
+    background-blend-mode: lighten;
+    background-attachment: fixed;
+    background-repeat: repeat;
+}*/
+
+.postBtn {
+	width: 100px;
+	height: 30px;
+
+	background-color: var(--main);
+	color: var(--textColor);
+	font-size: 14px;
+	border: none;
+	box-shadow: none;
+	transition: 70ms linear;
+
+	border-radius: 10px 10px  10px 10px;
+	cursor: pointer;
+}
+
+.postBtn:hover{
+	background-color: var(--darkGreenText);
+	color: #FFFFFF;
+}
+
+/* MAIN - User Post */
+/*.userpost{
+	width: 80%;
+    right: 1500px;
+    padding-bottom: 20px;
+    padding-top: 30px;
+}*/
+
+.userposted {
+    width: 80%;
+    margin: 30px;
+    background-color: rgba(255,255,255,0.8);
+    border: 1px solid black;
+
+}
+#postForm {
+	width: 500px;
+	border: 2px solid var(--main);
+	padding: 10px;
+	margin: 10px auto;
+	border-radius: 5px;
+	background-color: rgba(255,255,255,0.4);
+
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 5fr, 1fr;
+}
+#postForm textarea{
+	font-family: 'Lato', sans-serif;
+	grid-column: 1 / -1;
+	grid-row: 1 / 2;
+	padding: 10px;
+	background-color: #e8eed2;
+	margin-bottom: 5px;
+	border: none;
+	box-shadow: none;
+	outline: none;
+	resize: none;
+	
+}
+#postForm select{
+	border: none;
+	background-color: var(--main);
+
+	grid-column: 1 / 3;
+	grid-row: 2 / 3;
+}
+#postForm input[type="file"]{
+	border: none;
+	background-color: var(--main);
+	text-align: center;
+
+	grid-column: 4 / 9;
+	grid-row: 2 / 3;
+}
+#postForm input[type="submit"]{
+	grid-column: 10 / -1;
+	grid-row: 2 / 3;
+
+	height: 30px;
+	background-color: var(--darkGreenText);
+	color: #FFFFFF;
+	font-size: 14px;
+	border: none;
+	box-shadow: none;
+	transition: 70ms linear;
+	border-radius: 10px 10px  10px 10px;
+	cursor: pointer;
+}
+#postForm input[type="submit"]:hover{
+	background-color: var(--main);
+	color: var(--textColor);
+}
+/* MAIN - END OF User Post */
+
+/* MAIN - POSTS */
+.userposted{
+	width: 500px;
+	border: 2px solid var(--main);
+	padding: 10px;
+	margin: 10px auto;
+	border-radius: 5px;
+
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows:minmax(60px,1fr);
+	grid-auto-rows: auto;
+	grid-row-gap: 5px;
+	justify-items: center;
+}
+.userposted .userImg{
+	margin: 0;
+	padding: 0;
+	width: 50px;
+	height: 50px;
+	border: 4px solid var(--main);
+	border-radius: 50%;
+
+	grid-row: 1 / 2;
+	grid-column: 1 / 2;
+	align-self: center;
+}
+.userposted a, .userposted a:visited{
+	text-decoration: none;
+	color: var(--darkGreenText);
+	font-size: 1.1em;
+	
+	transition: 80ms linear;
+
+	grid-row: 1 / 2;
+	grid-column: 2 / 6;
+	justify-self: start;
+	align-self: center;
+}
+.userposted a:hover{
+	color: var(--main);
+}
+.userposted img{
+	width: 100%;
+	padding: 5px 0;
+	border-top: 2px dashed var(--main);
+	border-bottom: 2px dashed var(--main);
+
+	grid-row: 3 / 4;
+	grid-column: 1 / -1;
+}
+.userposted p{
+	color: var(--darkGreenText);
+
+	grid-column: 11 / -1;
+	grid-row: 4 / 5;
+}
+.userposted .content{
+	grid-column: 2 / 12;
+	grid-row: 2 / 3;
+	color: var(--textColor);
+}
+.userposted .edit, .userposted .edit:visited{
+	width: 100px;
+	background-color: var(--darkGreenText);
+	color: white;
+	text-align: center;
+	transition: 70ms linear;
+	border-radius: 10px 10px  10px 10px;
+	cursor: pointer;
+
+	grid-column: 1 / 3;
+	grid-row: 4 / 5;
+}
+.userposted .edit:hover{
+	background-color: var(--main);
+	color: #000000;
+}
+
+
+
+/* EDIT POST */
+#editPostBody{
+	max-width: 300px;
+	height: auto;
+	background-color: #f4f4f4;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+}
+.contents {
+	background-color: white;
+	font-family: 'Lato', sans-serif;
+	margin: 50px auto 10px auto;
+	width: 250px;
+	height: auto;
+	padding: 20px 20px;
+	font-size: 20px;
+	border: 2px solid var(--main);
+
+}
+#saveChanges {
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+	width: auto;
+	height: auto;
+	padding: 10px;
+	margin: 5px auto;
+	background-color: var(--darkGreenText);
+	color: white;
+	outline: none;
+	border: 0;
+	border-radius: 10px 10px  10px 10px;
+	transition: 70ms linear;
+
+}
+#saveChanges:hover{
+	background-color: var(--main);
+	color: #000000;
+	cursor: pointer;
+}
+#back, #back:visited, #back:focus{
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+	text-decoration: none;
+	width: auto;
+	height: auto;
+	padding: 10px;
+	background-color: var(--darkGreenText);
+	color: white;
+	outline: none;
+	border: 0;
+	border-radius: 10px 10px  10px 10px;
+	transition: 70ms linear;
+
+}
+#back:hover{
+	background-color: coral;
+	color: #000000;
+	cursor: pointer;
+}
+/* back to top button */
+#backToTopBtn{
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  
+  z-index:99;
+}
+#backToTop{
+  font-size: 40px;
+  color: #38ada9;
+  transition: 100ms linear;
+  animation: blink 2s infinite;
+}
+#backToTop:hover{
+  color: #78e08f;
+  opacity: 1;
+  cursor: pointer;
+  animation: none;
+}
+@keyframes blink{
+  0%{opacity: 0.4}
+  50%{opacity:1}
+  100%{opacity: 0.4}
+}

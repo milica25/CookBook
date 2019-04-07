@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+
+
+}
+main {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+:root{
+    --textColor: #000000;
+    --main: #A3E67C;
+    --darkGreenText: #5E8449;
+}
+body{
+
+    background: url(backImage_dash.jpg) repeat center center;
+    background-size: cover;
+    height: 100%;
+    background-blend-mode: lighten;
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+#header1 {
+	position: sticky;
+	top: 0px;
+	left: 0px;
+	z-index: 20;
+	border-bottom: 2px solid rgb(255, 255, 255);
+	width: 100%;
+	min-height: 60px;
+	height: auto;
+	background-color: #3b3b3b;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.userset{
+	max-width: 300px;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+.userset img{
+	margin: 0;
+	padding: 0;
+	width: 50px;
+	height: 50px;
+	border: 2px solid var(--darkGreenText);
+	border-radius: 50%;
+	transition: 80ms linear;
+}
+.userset img:hover{
+	border:2px solid var(--main);
+}
+.userset a, .userset a:visited{
+	text-decoration: none;
+	color: var(--darkGreenText);
+	font-size: 1.3em;
+	transition: 80ms linear;
+}
+.userset a:hover{
+	color: var(--main);
+}
+.userset a input[type="submit"]{
+	width: 100px;
+	height: 30px;
+
+	background-color: var(--main);
+	color: var(--textColor);
+	font-size: 14px;
+	border: none;
+	box-shadow: none;
+	transition: 70ms linear;
+
+	border-radius: 10px 10px  10px 10px;
+	cursor: pointer;
+}
+.userset a input[type="submit"]:hover{
+	background-color: var(--darkGreenText);
+	color: #FFFFFF;
+}
+#editProfileDiv {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 50px;
+	border: 2px solid var(--main);
+	border-radius: 5px;
+	width: 500px;
+	background-color: rgba(255,255,255,0.8);
+}
+input {
+	margin: 10px;
+	border: 2px solid var(--main);
+	border-radius: 5px;
+	padding: 2px;
+}
+input:nth-child(6){
+	background-color: var(--darkGreenText);
+	color: white;
+}
+input:nth-child(6):hover{
+	background-color: var(--main);
+	color: #000000;
+	cursor: pointer;
+}

@@ -1,0 +1,191 @@
+:root{
+    --textColor: #000000;
+    --main: #A3E67C;
+    --darkGreenText: #5E8449;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: 'Lato', sans-serif;
+
+	background: url(backImage_dash.jpg) repeat center center;
+    background-size: cover;
+    height: 100%;
+    background-blend-mode: lighten;
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+#header1 {
+	position: sticky;
+	top: 0px;
+	left: 0px;
+	z-index: 20;
+	border-bottom: 2px solid rgb(255, 255, 255);
+	width: 100%;
+	min-height: 60px;
+	height: auto;
+	background-color: #3b3b3b;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.userset{
+	max-width: 300px;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+.userset img{
+	margin: 0;
+	padding: 0;
+	width: 50px;
+	height: 50px;
+	border: 2px solid var(--darkGreenText);
+	border-radius: 50%;
+	transition: 80ms linear;
+}
+.userset img:hover{
+	border:2px solid var(--main);
+}
+.userset a, .userset a:visited, .imekorisnika, .imekorisnika:visited{
+	text-decoration: none;
+	color: var(--darkGreenText);
+	font-size: 1.3em;
+	transition: 80ms linear;
+}
+.userset a:hover, .imekorisnika:hover{
+	color: var(--main);
+}
+.userset a input[type="submit"]{
+	width: 100px;
+	height: 30px;
+
+	background-color: var(--main);
+	color: var(--textColor);
+	font-size: 14px;
+	border: none;
+	box-shadow: none;
+	transition: 70ms linear;
+
+	border-radius: 10px 10px  10px 10px;
+	cursor: pointer;
+}
+.userset a input[type="submit"]:hover{
+	background-color: var(--darkGreenText);
+	color: #FFFFFF;
+}
+.loggedHead{
+	text-align: center;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.loggedHead img{
+	border: 5px solid var(--main);
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+}
+#userHeading{
+	margin: 10px auto;
+	background-color: rgba(255,255,255,0.8);
+	color: var(--darkGreenText);
+	border: 2px solid var(--main);
+	
+}
+.editProfile{
+  margin: 0 auto;
+  width: 100px;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+  padding: 10px 20px;
+  color: #FFFFFF;
+  background-color: #34495e;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 100ms linear;
+}
+.editProfile:hover{
+  animation: shake 0.6s infinite;
+  background-color: #34995e;
+}
+.userpost{
+	width: 500px;
+	border: 2px solid var(--main);
+	padding: 10px;
+	margin: 10px auto;
+	border-radius: 5px;
+	background-color: rgba(255,255,255,0.8);
+	box-shadow: 0 0 2px 5px rgba(0,0,0,0.6);
+
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows:minmax(60px,1fr);
+	grid-auto-rows: auto;
+	grid-row-gap: 5px;
+	justify-items: center;
+}
+
+.userpost img{
+	width: 100%;
+	padding: 5px 0;
+	border-top: 2px dashed var(--main);
+	border-bottom: 2px dashed var(--main);
+
+	grid-row: 3 / 4;
+	grid-column: 1 / -1;
+}
+.userpost .content{
+	grid-column: 2 / 12;
+	grid-row: 2 / 3;
+	color: var(--textColor);
+}
+.userpost p{
+	color: var(--darkGreenText);
+
+	grid-column: 11 / -1;
+	grid-row: 4 / 5;
+}
+.edContainer{
+	width: 100%;
+	grid-column: 1 / 5;
+	grid-row: 4 / 5;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.delete, .edit{
+	color: var(--darkGreenText);
+	font-size: 20px;
+}
+.delete:hover, .edit:hover{
+	transform: scale(1.1);
+	transition: 100ms linear;
+}
+
+@keyframes shake {
+  0%{
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  25%{
+    transform: translate(1px, 1px) rotate(1deg);
+  }
+  50%{
+    transform: translate(-1px, -1px) rotate(-1deg);
+  }
+  75%{
+    transform: translate(2px, -1px) rotate(2deg);
+  }
+  1000%{
+    transform: translate(-1px, -1px) rotate(-1deg);
+  }
+}
